@@ -1,0 +1,124 @@
+📗
+	Information about a web request.
+📗
+🐇 📥 🍇
+	🐊 ↘🔸🔡
+
+	🖍🆕 method 🔡
+	🖍🆕 path 🔡
+	🖍🆕 headers 🍯🐚🔡🍆 ⬅ 🆕🍯🐚🔡🍆❗
+	🖍🆕 body 🔡
+
+	🆕 request🔡 🚧🚧🔸👓 🍇
+		💭 Splits the request into lines and remove the last line if it's empty
+		🔫request 🔤❌r❌n🔤❗ ➡ 🖍🆕 lines
+		↪ 🐽lines 📏lines❓ ➖ 1❗ 🙌 🔤🔤 🍇
+			🐼lines❗
+		🍉
+		🍡lines❗ ➡ linesIter
+
+		💭 Parse the method and path from the first line
+		🔽linesIter❗ ➡ firstLine
+		🔫firstLine 🔤 🔤❗ ➡ requestElements
+		💭 Parse the method, or rais an error
+		↪ 📏requestElements❓ ◀ 1 🍇
+			🚨🆕🚧🔸👓🔤No HTTP method in request🔤❗
+		🍉
+		📫🐽requestElements 0❗❗ ➡ 🖍 method
+		💭 Parse the path, or rais an error
+		↪ 📏requestElements❓ ◀ 2 🍇
+			🚨🆕🚧🔸👓🔤No path in request🔤❗
+		🍉
+		📪🐽requestElements 1❗❗ ➡ 🖍 path
+
+		💭 Parse the headers
+		🔽linesIter❓ ➡ 🖍🆕 cont
+		🔁 cont 🍇
+			🔽linesIter❗ ➡ line
+			↪ line 🙌 🔤🔤 🍇
+				💭 If we reach an empty line, we've reached the body
+				👎 ➡ 🖍 cont
+			🍉
+			🙅 🍇
+				💭 Each header is on the format "<key>: <value>"
+				↪ 🔍line 🔤: 🔤❗ ➡ split 🍇
+					📪🔪line 0 split❗❗ ➡ key
+					🔪line split ➕ 2 📐line❗ ➖ split❗ ➡ value
+					value ➡ 🐽headers key❗
+				🍉
+
+				🔽linesIter❓ ➡ 🖍 cont
+			🍉
+		🍉
+
+		💭 If there are more lines, add them to the body
+		↪ 🔽linesIter❓ 🍇
+			🆕🔠❗ ➡ sb
+			🔁 🔽linesIter❓ 🍇
+				🐻sb 🔽linesIter❗❗
+				🐻sb 🔤❌r❌n🔤❗
+			🍉
+			🔡sb❗ ➡ 🖍 body
+		🍉
+		🙅 🍇
+			🔤🔤 ➡ 🖍 body
+		🍉
+	🍉
+
+	📗
+		Returns the method of the request.
+	📗
+	❓🚇 ➡ 🔡 🍇
+		↩ method
+	🍉
+
+	📗
+		Returns the path of the request.
+	📗
+	❓🛤 ➡ 🔡 🍇
+		↩ path
+	🍉
+
+	📗
+		Returns the value of the requested header, or nothing.
+	📗
+	❓🎧 header🔡 ➡ 🍬🔡 🍇
+		↩ 🐽headers 📪header❗❗
+	🍉
+
+	📗
+		Returns the body of the request.
+	📗
+	❓💪 ➡ 🔡 🍇
+		↩ body
+	🍉
+
+	📗
+		Returns the request in string format.
+	📗
+	❗🔡 ➡ 🔡 🍇
+		🆕🔠❗ ➡ sb
+		🐻sb 🔤🧲method🧲 🧲path🧲🔤❗
+
+		🔂 key 🐙headers❗ 🍇
+			🐻sb 🔤❌r❌n🧲key🧲: 🧲🍺🐽headers key❗🧲🔤❗
+		🍉
+
+		↪ ❎body 🙌 🔤🔤❗ 🍇
+			🐻sb 🔤❌r❌n❌r❌n🧲body🧲🔤❗
+		🍉
+
+		↩ 🔡sb❗
+	🍉
+🍉
+
+📗
+	HTTP request parse error.
+
+	An error raised when a HTTP request cannot be parsed.
+📗
+🐇 🚧🔸👓 🚧 🍇
+	🆕 message 🔡 🍇
+		⤴🆕message❗
+	🍉
+🍉

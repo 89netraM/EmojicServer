@@ -1,9 +1,10 @@
 📜 🔤webserver.🍇🔤
+📜 🔤request.🍇🔤
 
 🏁 🍇
 	🆕🕸️3000❗ ➡ server
-	🍺🏃server 🍇🎍🥡 input🔡 ➡ 🔡
-		😀input❗
+	🍺🏃server 🍇🎍🥡 request📥 ➡ 🔡
+		😀🔤🧲request🧲🔤❗
 		↩ 🔤HTTP/1.1 200 OK❌r❌nContent-Type: text/plain❌r❌nServer: 🕸️/1.0❌r❌n❌r❌nHello World!🔤
 	🍉❗
 🍉
