@@ -5,55 +5,73 @@
 📗
 🐇 🕸️ 🍇
 	🖍🆕 port🔢
+	🖍🆕 threadCount🔢 ⬅ 32
 
 	🆕 🍼port🔢 🍇🍉
+	🆕 🍼port🔢 🍼threadCount🔢 🍇🍉
 
 	📗
 		Run the server on the initialized port and with the specified responder
 		function.
 	📗
-	❗ 🏃 responder🍇🔡➡🔡🍉 🚧🚧🔸↕ 🍇
+	❗ 🏃 🎍🥡responder🍇🔡➡🔡🍉 🚧🚧🔸↕ 🍇
 		💭 Instantiate and start a TCP listener at the specified port
 		🔺 🆕🏄port❗ ➡ server
 
-		🔁 👍 🍇
-			💭 Wait for a connecting client
-			🆗 clientSocket 🙋server❗ 🍇
-				👍 ➡ 🖍🆕 reading
-				🆕🔠❗ ➡ sb
-
-				💭 Read all the data from the client
-				🔁 reading 🍇
-					🆗 data 👂clientSocket 1024❗ 🍇
-						↪ 🔡data❗ ➡ text 🍇
-							🐻sb text❗
-						🍉
-						↪ 📏data❓ ◀ 1024 🍇
-							👎 ➡ 🖍 reading
-						🍉
+		💭 Listens on a number of threads
+		🆕🍨🐚🧵🍆❗ ➡ 🖍🆕 threads
+		🔂 i 🆕⏩0 threadCount❗ 🍇
+			🐻threads 🆕🧵🍇🎍🥡
+				💭 Wait for new connections
+				🔁 👍 🍇
+					💭 Wait for a connecting client
+					🆗 clientSocket 🙋server❗ 🍇
+						🕳👇clientSocket responder❗
 					🍉
-					🙅 _ 🍇
-						👎 ➡ 🖍 reading
+					🙅 error 🍇
+						😀🔤An error occured when connecting to a client: 🧲💬error❗🧲🔤❗
 					🍉
 				🍉
+			🍉❗❗
+		🍉
 
-				💭 Query the responder for a response
-				⁉responder 🔡sb❗❗ ➡ response
+		💭 Wait for all threads to exit (psst, it'll never happen)
+		🔂 thread threads 🍇
+			🛂thread❗
+		🍉
+	🍉
 
-				💭 Send the response to the client
-				🆗 💬clientSocket 📇response❗❗ 🍇
-					💭 Succesfully sent the response
+	🔒 ❗ 🕳 socket📞 responder🍇🔡➡🔡🍉 🍇
+		👍 ➡ 🖍🆕 reading
+		🆕🔠❗ ➡ sb
+
+		💭 Read all the data from the client
+		🔁 reading 🍇
+			🆗 data 👂socket 1024❗ 🍇
+				↪ 🔡data❗ ➡ text 🍇
+					🐻sb text❗
 				🍉
-				🙅 error 🍇
-					😀🔤An error occured when sending the response to the client: 🧲💬error❗🧲🔤❗
+				↪ 📏data❓ ◀ 1024 🍇
+					👎 ➡ 🖍 reading
 				🍉
-
-				💭 Close the client socket
-				🚪clientSocket❗
 			🍉
-			🙅 error 🍇
-				😀🔤An error occured when connecting to a client: 🧲💬error❗🧲🔤❗
+			🙅 _ 🍇
+				👎 ➡ 🖍 reading
 			🍉
 		🍉
+
+		💭 Query the responder for a response
+		⁉responder 🔡sb❗❗ ➡ response
+
+		💭 Send the response to the client
+		🆗 💬socket 📇response❗❗ 🍇
+			💭 Succesfully sent the response
+		🍉
+		🙅 error 🍇
+			😀🔤An error occured when sending the response to the client: 🧲💬error❗🧲🔤❗
+		🍉
+
+		💭 Close the client socket
+		🚪socket❗
 	🍉
 🍉
