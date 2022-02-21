@@ -1,10 +1,6 @@
-build-lib:
-	mkdir -p ./packages/webserver
-	emojicodec -p webserver ./lib/main.🍇 -o ./packages/webserver/libwebserver.a
-
-build-exec: build-lib
+build:
 	mkdir -p ./target
 	emojicodec ./src/main.🍇 -o ./target/main
 
-run: build-exec
+run: build
 	./target/main

@@ -1,0 +1,59 @@
+📦 sockets 🏠
+
+📗
+	A configurable server.
+📗
+🐇 🕸️ 🍇
+	🖍🆕 port🔢
+
+	🆕 🍼port🔢 🍇🍉
+
+	📗
+		Run the server on the initialized port and with the specified responder
+		function.
+	📗
+	❗ 🏃 responder🍇🔡➡🔡🍉 🚧🚧🔸↕ 🍇
+		💭 Instantiate and start a TCP listener at the specified port
+		🔺 🆕🏄port❗ ➡ server
+
+		🔁 👍 🍇
+			💭 Wait for a connecting client
+			🆗 clientSocket 🙋server❗ 🍇
+				👍 ➡ 🖍🆕 reading
+				🆕🔠❗ ➡ sb
+
+				💭 Read all the data from the client
+				🔁 reading 🍇
+					🆗 data 👂clientSocket 1024❗ 🍇
+						↪ 🔡data❗ ➡ text 🍇
+							🐻sb text❗
+						🍉
+						↪ 📏data❓ ◀ 1024 🍇
+							👎 ➡ 🖍 reading
+						🍉
+					🍉
+					🙅 _ 🍇
+						👎 ➡ 🖍 reading
+					🍉
+				🍉
+
+				💭 Query the responder for a response
+				⁉responder 🔡sb❗❗ ➡ response
+
+				💭 Send the response to the client
+				🆗 💬clientSocket 📇response❗❗ 🍇
+					💭 Succesfully sent the response
+				🍉
+				🙅 error 🍇
+					😀🔤An error occured when sending the response to the client: 🧲💬error❗🧲🔤❗
+				🍉
+
+				💭 Close the client socket
+				🚪clientSocket❗
+			🍉
+			🙅 error 🍇
+				😀🔤An error occured when connecting to a client: 🧲💬error❗🧲🔤❗
+			🍉
+		🍉
+	🍉
+🍉
