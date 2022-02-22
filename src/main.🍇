@@ -4,13 +4,37 @@
 📜 🔤route.🍇🔤
 📜 🔤staticRoute.🍇🔤
 📜 🔤methodPathRoute.🍇🔤
+📜 🔤filter.🍇🔤
+📜 🔤functionFilter.🍇🔤
+📜 🔤postProcessor.🍇🔤
+📜 🔤functionPostProcessor.🍇🔤
 
 🏁 🍇
 	🆕🕸️3000❗ ➡ server
 	🐻server 🆕📁🔤wwwroot🔤❗❗
+	🔗server 🍇🎍🥡 request📥 ➡ 🍬📤
+		💭 Disallow unauthorized API calls
+		↪ 🎼🛤request❓ 🔤/api🔤❗ 🍇
+			↪ 🎧request 🔤Authorization🔤❓ ➡ auth 🍇
+				↪ ❎auth 🙌 🔤Password123🔤❗ 🍇
+					↩ 👮🐇📤❗
+				🍉
+			🍉
+			🙅 🍇
+				↩ 👮🐇📤❗
+			🍉
+		🍉
+		↩ 🤷
+	🍉❗
 	🐐server 🔤/api/time🔤 🍇🎍🥡 request📥 ➡ 📤
 		💭 Respondes with the current time
 		↩ 💻🐇📤 🔤{"time":🧲🕰🐇💻❗🧲}🔤❗
+	🍉❗
+	🕒server 🍇🎍🥡 request📥 response📤
+		💭 Caches API repsonses
+		↪ 🎼🛤request❓ 🔤/api🔤❗ 🍇
+			🔤max-age=5🔤 ➡ 🎧response 🔤Cache-Control🔤❗
+		🍉
 	🍉❗
 	🍺🏃server❗
 🍉

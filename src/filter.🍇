@@ -1,0 +1,10 @@
+📗
+	A filter object that can "abort" requests early.
+📗
+🐊 ⛓ 🍇
+	📗
+		Aborts the request, with an immediate response, or returns nothing to pass
+		it through.
+	📗
+	❗👣 request📥 ➡ 🍬📤
+🍉

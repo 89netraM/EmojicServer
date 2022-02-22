@@ -1,0 +1,9 @@
+📗
+	A post processor that can edit response before sending them to the client.
+📗
+🐊 🕑 🍇
+	📗
+		Receives a request object and a response reference that might be edited.
+	📗
+	❗👣 request📥 response📤
+🍉

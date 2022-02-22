@@ -6,10 +6,26 @@
 🐇 🕸️ 🍇
 	🖍🆕 port🔢
 	🖍🆕 threadCount🔢 ⬅ 32
+	🖍🆕 filters🍨🐚⛓🍆 ⬅ 🆕🍨🐚⛓🍆❗
 	🖍🆕 routes🍨🐚🛣🍆 ⬅ 🆕🍨🐚🛣🍆❗
+	🖍🆕 postProcessors🍨🐚🕑🍆 ⬅ 🆕🍨🐚🕑🍆❗
 
 	🆕 🍼port🔢 🍇🍉
 	🆕 🍼port🔢 🍼threadCount🔢 🍇🍉
+
+	📗
+		Add a filter to the server.
+	📗
+	❗ 🐻 filter⛓ 🍇
+		🐻filters filter❗
+	🍉
+
+	📗
+		Adds a filter function to the server.
+	📗
+	❗ 🔗 callable🍇📥➡🍬📤🍉 🍇
+		🐻👇 🆕🔗 callable❗❗
+	🍉
 
 	📗
 		Add a route to the server.
@@ -44,6 +60,20 @@
 	📗
 	❗ 🗑 path🔡 handler🍇📥➡📤🍉 🍇
 		🐻👇 🆕🚄🔤DELETE🔤 path handler❗❗
+	🍉
+
+	📗
+		Add a post processor to the server.
+	📗
+	❗ 🐻 postProcessor🕑 🍇
+		🐻postProcessors postProcessor❗
+	🍉
+
+	📗
+		Adds a processor function to the server.
+	📗
+	❗ 🕒 callable🍇📥📤🍉 🍇
+		🐻👇 🆕🕒 callable❗❗
 	🍉
 
 	📗
@@ -122,9 +152,26 @@
 	🔒 ❓ 👫 request📥 ➡ 📤 🍇
 		💭 Try the incoming request on all routes
 		🔂 route routes 🍇
+			💭 This route can handle this request
 			↪ 👣route request❓ 🍇
-				💭 This route can handle this request
-				↩ 👣route request❗
+				💭 Send the request through the filters
+				🔂 filter filters 🍇
+					↪ 👣filter request❗ ➡ response 🍇
+						💭 Abort request with filter response
+						↩ response
+					🍉
+				🍉
+
+				💭 Ask the route for a response
+				👣route request❗ ➡ response
+
+				💭 Modifies the response with post processors
+				🔂 postProcessor postProcessors 🍇
+					👣postProcessor request response❗
+				🍉
+
+				💭 Returns the modified response
+				↩ response
 			🍉
 		🍉
 
