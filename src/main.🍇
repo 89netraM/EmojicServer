@@ -3,9 +3,14 @@
 📜 🔤response.🍇🔤
 📜 🔤route.🍇🔤
 📜 🔤staticRoute.🍇🔤
+📜 🔤methodPathRoute.🍇🔤
 
 🏁 🍇
 	🆕🕸️3000❗ ➡ server
 	🐻server 🆕📁🔤wwwroot🔤❗❗
+	🐐server 🔤/api/time🔤 🍇🎍🥡 request📥 ➡ 📤
+		💭 Respondes with the current time
+		↩ 💻🐇📤 🔤{"time":🧲🕰🐇💻❗🧲}🔤❗
+	🍉❗
 	🍺🏃server❗
 🍉

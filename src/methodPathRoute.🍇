@@ -1,0 +1,44 @@
+📗
+	A route that handles a specific path and method combination, with a callable
+	that returns a response.
+📗
+🐇 🚄 🍇
+	🐊 🛣
+
+	📗
+		Panics if anything is wrong with the input.
+	📗
+	🐇🔒❗ 💥 method🔡 path🔡 🍇
+		💭 Panic if the method is not a valid HTTP method
+		🍿🔤CONNECT🔤🔤DELETE🔤🔤GET🔤🔤HEAD🔤🔤OPTIONS🔤🔤PATCH🔤🔤POST🔤🔤PUT🔤🔤TRACE🔤🍆 ➡ validMethods
+		↪ ❎🐦validMethods method❓❗ 🍇
+			🤯🐇💻 🔤Method 🧲method🧲 is not a valid HTTP method🔤❗
+		🍉
+		💭 Panic if the path does not start with a "/"
+		↪ ❎🎼path 🔤/🔤❗❗ 🍇
+			🤯🐇💻 🔤Path 🧲path🧲 does not start with a "/"🔤❗
+		🍉
+	🍉
+
+	🖍🆕 method🔡
+	🖍🆕 path🔡
+	🖍🆕 handler🍇📥➡📤🍉
+
+	📗
+		A route that handles `httpMethod` requests to `requestPath` with the
+		`handler`.
+	📗
+	🆕 httpMethod🔡 requestPath🔡 🍼handler🍇📥➡📤🍉 🍇
+		📫httpMethod❗ ➡ 🖍 method
+		📪requestPath❗ ➡ 🖍 path
+		💥🐇🚄 method path❗
+	🍉
+
+	❓👣 request📥 ➡ 👌 🍇
+		↩ 🚇request❓ 🙌 method 🤝 🛤request❓ 🙌 path
+	🍉
+
+	❗👣 request📥 ➡ 📤 🍇
+		↩ ⁉handler request❗
+	🍉
+🍉

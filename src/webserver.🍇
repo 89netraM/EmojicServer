@@ -19,6 +19,34 @@
 	🍉
 
 	📗
+		Adds a GET request `handler` for `path` to the server.
+	📗
+	❗ 🐐 path🔡 handler🍇📥➡📤🍉 🍇
+		🐻👇 🆕🚄🔤GET🔤 path handler❗❗
+	🍉
+
+	📗
+		Adds a POST request `handler` for `path` to the server.
+	📗
+	❗ 📯 path🔡 handler🍇📥➡📤🍉 🍇
+		🐻👇 🆕🚄🔤POST🔤 path handler❗❗
+	🍉
+
+	📗
+		Adds a PUT request `handler` for `path` to the server.
+	📗
+	❗ ⛳ path🔡 handler🍇📥➡📤🍉 🍇
+		🐻👇 🆕🚄🔤PUT🔤 path handler❗❗
+	🍉
+
+	📗
+		Adds a DELETE request `handler` for `path` to the server.
+	📗
+	❗ 🗑 path🔡 handler🍇📥➡📤🍉 🍇
+		🐻👇 🆕🚄🔤DELETE🔤 path handler❗❗
+	🍉
+
+	📗
 		Run the server on the initialized port.
 	📗
 	❗ 🏃 🚧🚧🔸↕ 🍇
