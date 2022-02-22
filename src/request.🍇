@@ -12,10 +12,15 @@
 	🆕 request🔡 🚧🚧🔸👓 🍇
 		💭 Splits the request into lines and remove the last line if it's empty
 		🔫request 🔤❌r❌n🔤❗ ➡ 🖍🆕 lines
-		↪ 🐽lines 📏lines❓ ➖ 1❗ 🙌 🔤🔤 🍇
+		↪ 📏lines❓ ▶ 0 🤝 🐽lines 📏lines❓ ➖ 1❗ 🙌 🔤🔤 🍇
 			🐼lines❗
 		🍉
 		🍡lines❗ ➡ linesIter
+
+		💭 Abort on empty request
+		↪ ❎🔽linesIter❓❗ 🍇
+			🚨🆕🚧🔸👓🔤Empty request🔤❗
+		🍉
 
 		💭 Parse the method and path from the first line
 		🔽linesIter❗ ➡ firstLine
