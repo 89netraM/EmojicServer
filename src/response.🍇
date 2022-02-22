@@ -19,7 +19,7 @@
 		A response with status code `status`, and a HTML `body`.
 	📗
 	🐇❗🌐 status🔢 body🔡 ➡ 📤 🍇
-		↩ 🦖🐇📤 status body 🔤text/html🔤❗
+		↩ 🦖🐇📤 status body 🔤text/html; charset=UTF-8🔤❗
 	🍉
 	📗
 		A response with status code 200, and a HTML `body`.
@@ -50,13 +50,13 @@
 		A response with status code 200, and a JSON `body`.
 	📗
 	🐇❗💻 status🔢 body🔡 ➡ 📤 🍇
-		↩ 🦖🐇📤 status body 🔤text/json🔤❗
+		↩ 🦖🐇📤 status body 🔤text/json; charset=UTF-8🔤❗
 	🍉
 	📗
 		A response with status code `status`, and a JSON `body`.
 	📗
 	🐇❗💻 body🔡 ➡ 📤 🍇
-		↩ 🦖🐇📤 200 body 🔤text/json🔤❗
+		↩ 💻🐇📤 200 body❗
 	🍉
 
 	📗
