@@ -1,0 +1,244 @@
+📦 files 🏠
+
+📗
+	Information about a web response.
+📗
+🐇 📤 🍇
+	🐊 ↘🔸🔡
+
+	📗
+		A response with status code `status`, and a body `body` of type `type`.
+	📗
+	🐇❗🦖 status🔢 body🔡 type🔡 ➡ 📤 🍇
+		🆕📤 status body❗ ➡ response
+		type ➡ 🎧response 🔤content-type🔤❗
+		↩ response
+	🍉
+
+	📗
+		A response with status code `status`, and a HTML `body`.
+	📗
+	🐇❗🌐 status🔢 body🔡 ➡ 📤 🍇
+		↩ 🦖🐇📤 status body 🔤text/html🔤❗
+	🍉
+	📗
+		A response with status code 200, and a HTML `body`.
+	📗
+	🐇❗🌐 body🔡 ➡ 📤 🍇
+		↩ 🌐🐇📤 200 body❗
+	🍉
+	📗
+		A response with status code `status`, and a HTML body taken from `fileName`.
+	📗
+	🐇❗📄 status🔢 fileName🔡 ➡ 📤 🚧🚧🔸↕ 🍇
+		🔺📇🐇📄 fileName❗ ➡ file
+		↪ 🔡file❗ ➡ fileContent 🍇
+			↩ 🌐🐇📤 status fileContent❗
+		🍉
+		🙅 🍇
+			🚨🆕🚧🔸↕🔤Could not read file contents of 🧲fileName🧲🔤❗
+		🍉
+	🍉
+	📗
+		A response with status code 200, and a HTML body taken from `fileName`.
+	📗
+	🐇❗📄 fileName🔡 ➡ 📤 🚧🚧🔸↕ 🍇
+		↩ 🔺📄🐇📤 200 fileName❗
+	🍉
+
+	📗
+		A response with status code 200, and a JSON `body`.
+	📗
+	🐇❗💻 status🔢 body🔡 ➡ 📤 🍇
+		↩ 🦖🐇📤 status body 🔤text/json🔤❗
+	🍉
+	📗
+		A response with status code `status`, and a JSON `body`.
+	📗
+	🐇❗💻 body🔡 ➡ 📤 🍇
+		↩ 🦖🐇📤 200 body 🔤text/json🔤❗
+	🍉
+
+	📗
+		A 302 redirect to `url`.
+	📗
+	🐇❗🗺 url🔡 ➡ 📤 🍇
+		🆕📤 302❗ ➡ response
+		url ➡ 🎧response 🔤location🔤❗
+		↩ response
+	🍉
+
+	📗
+		A 400 bad request response, with a body `body` of type `type`.
+	📗
+	🐇❗💔 body🔡 type🔡 ➡ 📤 🍇
+		↩ 🦖🐇📤 400 body type❗
+	🍉
+	📗
+		A 400 bad request response, without a body.
+	📗
+	🐇❗💔 ➡ 📤 🍇
+		↩ 🆕📤 400❗
+	🍉
+
+	📗
+		A 401 unauthorized response, with a body `body` of type `type`.
+	📗
+	🐇❗👮 body🔡 type🔡 ➡ 📤 🍇
+		↩ 🦖🐇📤 401 body type❗
+	🍉
+	📗
+		A 401 unauthorized response, without a body.
+	📗
+	🐇❗👮 ➡ 📤 🍇
+		↩ 🆕📤 401❗
+	🍉
+
+	📗
+		A 404 not found response, with a body `body` of type `type`.
+	📗
+	🐇❗🔭 body🔡 type🔡 ➡ 📤 🍇
+		↩ 🦖🐇📤 404 body type❗
+	🍉
+	📗
+		A 404 not found response, without a body.
+	📗
+	🐇❗🔭 ➡ 📤 🍇
+		↩ 🆕📤 404❗
+	🍉
+
+	📗
+		A 405 method not allowed response, with a body `body` of type `type`.
+	📗
+	🐇❗🚫 body🔡 type🔡 ➡ 📤 🍇
+		↩ 🦖🐇📤 405 body type❗
+	🍉
+	📗
+		A 405 method not allowed response, without a body.
+	📗
+	🐇❗🚫 ➡ 📤 🍇
+		↩ 🆕📤 405❗
+	🍉
+
+	📗
+		A 500 internal server error response, with a body `body` of type `type`.
+	📗
+	🐇❗👿 body🔡 type🔡 ➡ 📤 🍇
+		↩ 🦖🐇📤 500 body type❗
+	🍉
+	📗
+		A 500 internal server error response, without a body.
+	📗
+	🐇❗👿 ➡ 📤 🍇
+		↩ 🆕📤 500❗
+	🍉
+
+	📗
+		"Translates" a HTTP status code into a human-readable string.
+	📗
+	🐇🔒❓ 🗿 status🔢 ➡ 🔡 🍇
+		↪ status 🙌 100 🍇 ↩ 🔤Continue🔤 🍉
+		↪ status 🙌 101 🍇 ↩ 🔤Switching Protocols🔤 🍉
+		↪ status 🙌 103 🍇 ↩ 🔤Early Hints🔤 🍉
+		↪ status 🙌 200 🍇 ↩ 🔤OK🔤 🍉
+		↪ status 🙌 201 🍇 ↩ 🔤Created🔤 🍉
+		↪ status 🙌 202 🍇 ↩ 🔤Accepted🔤 🍉
+		↪ status 🙌 203 🍇 ↩ 🔤Non-Authoritative Information🔤 🍉
+		↪ status 🙌 204 🍇 ↩ 🔤No Content🔤 🍉
+		↪ status 🙌 205 🍇 ↩ 🔤Reset Content🔤 🍉
+		↪ status 🙌 206 🍇 ↩ 🔤Partial Content🔤 🍉
+		↪ status 🙌 300 🍇 ↩ 🔤Multiple Choices🔤 🍉
+		↪ status 🙌 301 🍇 ↩ 🔤Moved Permanently🔤 🍉
+		↪ status 🙌 302 🍇 ↩ 🔤Found🔤 🍉
+		↪ status 🙌 303 🍇 ↩ 🔤See Other🔤 🍉
+		↪ status 🙌 304 🍇 ↩ 🔤Not Modified🔤 🍉
+		↪ status 🙌 307 🍇 ↩ 🔤Temporary Redirect🔤 🍉
+		↪ status 🙌 308 🍇 ↩ 🔤Permanent Redirect🔤 🍉
+		↪ status 🙌 400 🍇 ↩ 🔤Bad Request🔤 🍉
+		↪ status 🙌 401 🍇 ↩ 🔤Unauthorized🔤 🍉
+		↪ status 🙌 402 🍇 ↩ 🔤Payment Required🔤 🍉
+		↪ status 🙌 403 🍇 ↩ 🔤Forbidden🔤 🍉
+		↪ status 🙌 404 🍇 ↩ 🔤Not Found🔤 🍉
+		↪ status 🙌 405 🍇 ↩ 🔤Method Not Allowed🔤 🍉
+		↪ status 🙌 406 🍇 ↩ 🔤Not Acceptable🔤 🍉
+		↪ status 🙌 407 🍇 ↩ 🔤Proxy Authentication Required🔤 🍉
+		↪ status 🙌 408 🍇 ↩ 🔤Request Timeout🔤 🍉
+		↪ status 🙌 409 🍇 ↩ 🔤Conflict🔤 🍉
+		↪ status 🙌 410 🍇 ↩ 🔤Gone🔤 🍉
+		↪ status 🙌 411 🍇 ↩ 🔤Length Required🔤 🍉
+		↪ status 🙌 412 🍇 ↩ 🔤Precondition Failed🔤 🍉
+		↪ status 🙌 413 🍇 ↩ 🔤Payload Too Large🔤 🍉
+		↪ status 🙌 414 🍇 ↩ 🔤URI Too Long🔤 🍉
+		↪ status 🙌 415 🍇 ↩ 🔤Unsupported Media Type🔤 🍉
+		↪ status 🙌 416 🍇 ↩ 🔤Range Not Satisfiable🔤 🍉
+		↪ status 🙌 417 🍇 ↩ 🔤Expectation Failed🔤 🍉
+		↪ status 🙌 418 🍇 ↩ 🔤I'm a teapot🔤 🍉
+		↪ status 🙌 422 🍇 ↩ 🔤Unprocessable Entity🔤 🍉
+		↪ status 🙌 425 🍇 ↩ 🔤Too Early🔤 🍉
+		↪ status 🙌 426 🍇 ↩ 🔤Upgrade Required🔤 🍉
+		↪ status 🙌 428 🍇 ↩ 🔤Precondition Required🔤 🍉
+		↪ status 🙌 429 🍇 ↩ 🔤Too Many Requests🔤 🍉
+		↪ status 🙌 431 🍇 ↩ 🔤Request Header Fields Too Large🔤 🍉
+		↪ status 🙌 451 🍇 ↩ 🔤Unavailable For Legal Reasons🔤 🍉
+		↪ status 🙌 500 🍇 ↩ 🔤Internal Server Error🔤 🍉
+		↪ status 🙌 501 🍇 ↩ 🔤Not Implemented🔤 🍉
+		↪ status 🙌 502 🍇 ↩ 🔤Bad Gateway🔤 🍉
+		↪ status 🙌 503 🍇 ↩ 🔤Service Unavailable🔤 🍉
+		↪ status 🙌 504 🍇 ↩ 🔤Gateway Timeout🔤 🍉
+		↪ status 🙌 505 🍇 ↩ 🔤HTTP Version Not Supported🔤 🍉
+		↪ status 🙌 506 🍇 ↩ 🔤Variant Also Negotiates🔤 🍉
+		↪ status 🙌 507 🍇 ↩ 🔤Insufficient Storage🔤 🍉
+		↪ status 🙌 508 🍇 ↩ 🔤Loop Detected🔤 🍉
+		↪ status 🙌 510 🍇 ↩ 🔤Not Extended🔤 🍉
+		↪ status 🙌 511 🍇 ↩ 🔤Network Authentication Required🔤 🍉
+		↩ 🔤🔤
+	🍉
+
+	🖍🆕 status 🔢
+	🖍🆕 headers 🍯🐚🔡🍆 ⬅ 🍿
+			🔤server🔤 ➡ 🔤EmojicServer/1.0🔤
+		🍆
+	🖍🆕 body 🍬🔡
+
+	📗
+		A response with status code `status`, and an empty body.
+	📗
+	🆕 🍼status🔢 🍇🍉
+	📗
+		A response with status code `status`, and a body containing `body`.
+	📗
+	🆕 🍼status🔢 🍼body🔡 🍇
+		🔡📐body❗❗ ➡ 🎧👇 🔤content-length🔤❗
+	🍉
+
+	📗
+		Returns the value of the requested header, or nothing.
+	📗
+	❓🎧 header🔡 ➡ 🍬🔡 🍇
+		↩ 🐽headers 📪header❗❗
+	🍉
+	📗
+		Sets the value of the requested header.
+	📗
+	➡🎧 value🔡 header🔡 🍇
+		value ➡ 🐽headers 📪header❗❗
+	🍉
+
+	📗
+		Returns the response in string format.
+	📗
+	❗🔡 ➡ 🔡 🍇
+		🆕🔠❗ ➡ sb
+		🐻sb 🔤HTTP/1.1 🧲status🧲 🧲🗿🐇📤status❓🧲🔤❗
+
+		🔂 key 🐙headers❗ 🍇
+			🐻sb 🔤❌r❌n🧲key🧲: 🧲🍺🐽headers key❗🧲🔤❗
+		🍉
+
+		↪ body ➡ bodyText 🍇
+			🐻sb 🔤❌r❌n❌r❌n🧲bodyText🧲🔤❗
+		🍉
+
+		↩ 🔡sb❗
+	🍉
+🍉

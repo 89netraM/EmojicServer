@@ -14,7 +14,7 @@
 		Run the server on the initialized port and with the specified responder
 		function.
 	📗
-	❗ 🏃 🎍🥡responder🍇📥➡🔡🍉 🚧🚧🔸↕ 🍇
+	❗ 🏃 🎍🥡responder🍇📥➡📤🍉 🚧🚧🔸↕ 🍇
 		💭 Instantiate and start a TCP listener at the specified port
 		🔺 🆕🏄port❗ ➡ server
 
@@ -41,7 +41,7 @@
 		🍉
 	🍉
 
-	🔒 ❗ 🕳 socket📞 responder🍇📥➡🔡🍉 🍇
+	🔒 ❗ 🕳 socket📞 responder🍇📥➡📤🍉 🍇
 		👍 ➡ 🖍🆕 reading
 		🆕🔠❗ ➡ sb
 
@@ -66,7 +66,7 @@
 			⁉responder request❗ ➡ response
 
 			💭 Send the response to the client
-			🆗 💬socket 📇response❗❗ 🍇
+			🆗 💬socket 📇🔡response❗❗❗ 🍇
 				💭 Succesfully sent the response
 			🍉
 			🙅 error 🍇
