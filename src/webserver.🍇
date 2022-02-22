@@ -6,15 +6,22 @@
 🐇 🕸️ 🍇
 	🖍🆕 port🔢
 	🖍🆕 threadCount🔢 ⬅ 32
+	🖍🆕 routes🍨🐚🛣🍆 ⬅ 🆕🍨🐚🛣🍆❗
 
 	🆕 🍼port🔢 🍇🍉
 	🆕 🍼port🔢 🍼threadCount🔢 🍇🍉
 
 	📗
-		Run the server on the initialized port and with the specified responder
-		function.
+		Add a route to the server.
 	📗
-	❗ 🏃 🎍🥡responder🍇📥➡📤🍉 🚧🚧🔸↕ 🍇
+	❗ 🐻 route🛣 🍇
+		🐻routes route❗
+	🍉
+
+	📗
+		Run the server on the initialized port.
+	📗
+	❗ 🏃 🚧🚧🔸↕ 🍇
 		💭 Instantiate and start a TCP listener at the specified port
 		🔺 🆕🏄port❗ ➡ server
 
@@ -26,7 +33,7 @@
 				🔁 👍 🍇
 					💭 Wait for a connecting client
 					🆗 clientSocket 🙋server❗ 🍇
-						🕳👇clientSocket responder❗
+						🕳👇clientSocket❗
 					🍉
 					🙅 error 🍇
 						😀🔤An error occured when connecting to a client: 🧲💬error❗🧲🔤❗
@@ -41,7 +48,7 @@
 		🍉
 	🍉
 
-	🔒 ❗ 🕳 socket📞 responder🍇📥➡📤🍉 🍇
+	🔒 ❗ 🕳 socket📞 🍇
 		👍 ➡ 🖍🆕 reading
 		🆕🔠❗ ➡ sb
 
@@ -63,7 +70,7 @@
 		💭 Parse the incoming request
 		🆗 request 🆕📥🔡sb❗❗ 🍇
 			💭 Query the responder for a response
-			⁉responder request❗ ➡ response
+			👫👇 request❓ ➡ response
 
 			💭 Send the response to the client
 			🆗 💬socket 📇🔡response❗❗❗ 🍇
@@ -79,5 +86,18 @@
 
 		💭 Close the client socket
 		🚪socket❗
+	🍉
+
+	🔒 ❓ 👫 request📥 ➡ 📤 🍇
+		💭 Try the incoming request on all routes
+		🔂 route routes 🍇
+			↪ 👣route request❓ 🍇
+				💭 This route can handle this request
+				↩ 👣route request❗
+			🍉
+		🍉
+
+		💭 No route can handle this request
+		↩ 🔭🐇📤❗
 	🍉
 🍉

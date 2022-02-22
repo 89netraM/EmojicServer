@@ -1,0 +1,14 @@
+📗
+	A protocol for objects that can handle and respond to web requests.
+📗
+🐊 🛣 🍇
+	📗
+		Returns `👍` if this object can handle the given request.
+	📗
+	❓👣 request📥 ➡ 👌
+
+	📗
+		Handles the given request and returns a response.
+	📗
+	❗👣 request📥 ➡ 📤
+🍉

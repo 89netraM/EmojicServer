@@ -1,0 +1,106 @@
+📗
+	A route that handles GET requests for files.
+📗
+🐇 📁 🍇
+	🐊 🛣
+
+	📗
+		Panics if anything is wrong with the input.
+	📗
+	🐇🔒❗ 💥 prefix🍬🔡 root🔡 🍇
+		💭 Panic if the prefix is not a directory
+		↪ prefix ➡ p 🍇
+			↪ ❎🎼p 🔤/🔤❗❗ 🍇
+				🤯🐇💻 🔤Prefix 🧲p🧲 does not start with a "/"🔤❗
+			🍉
+		🍉
+		💭 Panic if root does not exist
+		↪ ❎📜🕊📑 root❗❗ 🍇
+			🤯🐇💻 🔤Path 🧲root🧲 does not exist🔤❗
+		🍉
+	🍉
+
+	📗
+		Returns the path to an existing file, or nothing.
+	📗
+	🐇🔒❗ 📂 path🔡 ➡ 🍬🔡 🍇
+		🔡path❗ ➡ 🖍🆕 p
+		💭 If it's a directory, add index.html
+		↪ ⛳p 🔤/🔤❗ 🍇
+			🔤🧲p🧲index.html🔤 ➡ 🖍 p
+		🍉
+		💭 If it exists, return it
+		↪ 📜🕊📑 path❗ 🍇
+			↩ p
+		🍉
+		💭 Otherwise, return nothing
+		↩ 🤷
+	🍉
+
+	🖍🆕 prefix🍬🔡
+	🖍🆕 root🔡
+
+	📗
+		Serves any GET request with contents from `root`.
+	📗
+	🆕 🍼root🔡 🍇
+		💥🐇📁 prefix root❗
+	🍉
+	📗
+		Serves GET request with the prefix `prefix` with contents from `root`.
+	📗
+	🆕 🍼prefix🔡 🍼root🔡 🍇
+		💥🐇📁 prefix root❗
+	🍉
+
+	❓👣 request📥 ➡ 👌 🍇
+		💭 Only handle GET requests
+		↪ ❎🚇request❓ 🙌 🔤GET🔤❗ 🍇
+			↩ 👎
+		🍉
+
+		🛤request❓ ➡ 🖍🆕 path
+		💭 Only handle requests with a path that starts with `prefix`
+		↪ prefix ➡ p 🍇
+			↪ ❎🎼path p❗❗ 🍇
+				↩ 👎
+			🍉
+			🔪path 📐p❗ 📐path❗ ➖ 📐p❗❗ ➡ 🖍 path
+		🍉
+
+		💭 Only handle requests for files that exist
+		🔤🧲root🧲/🧲path🧲🔤 ➡ 🖍 path
+		↪ 📂🐇📁 path❗ 🙌 🤷 🍇
+			↩ 👎
+		🍉
+
+		💭 If all tests pass, we can serve the file
+		↩ 👍
+	🍉
+
+	❗👣 request📥 ➡ 📤 🍇
+		💭 Here we can assume everything is OK and serve the file
+
+		🛤request❓ ➡ 🖍🆕 path
+		💭 Remove possible prefix from the path
+		↪ prefix ➡ p 🍇
+			📐p❗ ➡ pLength
+			📐path❗ ➡ pathLength
+			pathLength ➖ pLength ➡ restLength
+			🔪path pLength restLength❗ ➡ 🖍 path
+		🍉
+
+		💭 Only handle requests for files that exist
+		🔤🧲root🧲/🧲path🧲🔤 ➡ 🖍 path
+		🍺📂🐇📁 path❗ ➡ 🖍 path
+
+		💭 Serve the file
+		🆗 response 📄🐇📤 path❗ 🍇
+			↩ response
+		🍉
+		🙅 error 🍇
+			😀🔤Error reading file (🧲path🧲): 🧲💬error❗🧲🔤❗
+			↩ 👿🐇📤❗
+		🍉
+	🍉
+🍉
