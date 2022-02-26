@@ -193,6 +193,66 @@
 		↪ status 🙌 511 🍇 ↩ 🔤Network Authentication Required🔤 🍉
 		↩ 🔤🔤
 	🍉
+	📗
+		Translates HTTP status code string to integer.
+	📗
+	🐇🔒❗ 🗿 status🔡 ➡ 🔢 🚧🚧🔸👓 🍇
+		↪ status 🙌 🔤100🔤 🍇 ↩ 100 🍉
+		↪ status 🙌 🔤101🔤 🍇 ↩ 101 🍉
+		↪ status 🙌 🔤103🔤 🍇 ↩ 103 🍉
+		↪ status 🙌 🔤200🔤 🍇 ↩ 200 🍉
+		↪ status 🙌 🔤201🔤 🍇 ↩ 201 🍉
+		↪ status 🙌 🔤202🔤 🍇 ↩ 202 🍉
+		↪ status 🙌 🔤203🔤 🍇 ↩ 203 🍉
+		↪ status 🙌 🔤204🔤 🍇 ↩ 204 🍉
+		↪ status 🙌 🔤205🔤 🍇 ↩ 205 🍉
+		↪ status 🙌 🔤206🔤 🍇 ↩ 206 🍉
+		↪ status 🙌 🔤300🔤 🍇 ↩ 300 🍉
+		↪ status 🙌 🔤301🔤 🍇 ↩ 301 🍉
+		↪ status 🙌 🔤302🔤 🍇 ↩ 302 🍉
+		↪ status 🙌 🔤303🔤 🍇 ↩ 303 🍉
+		↪ status 🙌 🔤304🔤 🍇 ↩ 304 🍉
+		↪ status 🙌 🔤307🔤 🍇 ↩ 307 🍉
+		↪ status 🙌 🔤308🔤 🍇 ↩ 308 🍉
+		↪ status 🙌 🔤400🔤 🍇 ↩ 400 🍉
+		↪ status 🙌 🔤401🔤 🍇 ↩ 401 🍉
+		↪ status 🙌 🔤402🔤 🍇 ↩ 402 🍉
+		↪ status 🙌 🔤403🔤 🍇 ↩ 403 🍉
+		↪ status 🙌 🔤404🔤 🍇 ↩ 404 🍉
+		↪ status 🙌 🔤405🔤 🍇 ↩ 405 🍉
+		↪ status 🙌 🔤406🔤 🍇 ↩ 406 🍉
+		↪ status 🙌 🔤407🔤 🍇 ↩ 407 🍉
+		↪ status 🙌 🔤408🔤 🍇 ↩ 408 🍉
+		↪ status 🙌 🔤409🔤 🍇 ↩ 409 🍉
+		↪ status 🙌 🔤410🔤 🍇 ↩ 410 🍉
+		↪ status 🙌 🔤411🔤 🍇 ↩ 411 🍉
+		↪ status 🙌 🔤412🔤 🍇 ↩ 412 🍉
+		↪ status 🙌 🔤413🔤 🍇 ↩ 413 🍉
+		↪ status 🙌 🔤414🔤 🍇 ↩ 414 🍉
+		↪ status 🙌 🔤415🔤 🍇 ↩ 415 🍉
+		↪ status 🙌 🔤416🔤 🍇 ↩ 416 🍉
+		↪ status 🙌 🔤417🔤 🍇 ↩ 417 🍉
+		↪ status 🙌 🔤418🔤 🍇 ↩ 418 🍉
+		↪ status 🙌 🔤422🔤 🍇 ↩ 422 🍉
+		↪ status 🙌 🔤425🔤 🍇 ↩ 425 🍉
+		↪ status 🙌 🔤426🔤 🍇 ↩ 426 🍉
+		↪ status 🙌 🔤428🔤 🍇 ↩ 428 🍉
+		↪ status 🙌 🔤429🔤 🍇 ↩ 429 🍉
+		↪ status 🙌 🔤431🔤 🍇 ↩ 431 🍉
+		↪ status 🙌 🔤451🔤 🍇 ↩ 451 🍉
+		↪ status 🙌 🔤500🔤 🍇 ↩ 500 🍉
+		↪ status 🙌 🔤501🔤 🍇 ↩ 501 🍉
+		↪ status 🙌 🔤502🔤 🍇 ↩ 502 🍉
+		↪ status 🙌 🔤503🔤 🍇 ↩ 503 🍉
+		↪ status 🙌 🔤504🔤 🍇 ↩ 504 🍉
+		↪ status 🙌 🔤505🔤 🍇 ↩ 505 🍉
+		↪ status 🙌 🔤506🔤 🍇 ↩ 506 🍉
+		↪ status 🙌 🔤507🔤 🍇 ↩ 507 🍉
+		↪ status 🙌 🔤508🔤 🍇 ↩ 508 🍉
+		↪ status 🙌 🔤510🔤 🍇 ↩ 510 🍉
+		↪ status 🙌 🔤511🔤 🍇 ↩ 511 🍉
+		🚨🆕🚧🔸👓 🔤Unknown Status Code (🧲status🧲)🔤❗
+	🍉
 
 	🖍🆕 status 🔢
 	🖍🆕 headers 🍯🐚🔡🍆 ⬅ 🍿
@@ -209,6 +269,70 @@
 	📗
 	🆕 🍼status🔢 🍼body🔡 🍇
 		🔡📐body❗❗ ➡ 🎧👇 🔤content-length🔤❗
+	🍉
+
+	📗
+		Tries to parse a HTTP response.
+	📗
+	🆕 response🔡 🚧🚧🔸👓 🍇
+		💭 Splits the response into lines and remove the last line if it's empty
+		🔫response 🔤❌r❌n🔤❗ ➡ 🖍🆕 lines
+		↪ 📏lines❓ ▶ 0 🤝 🐽lines 📏lines❓ ➖ 1❗ 🙌 🔤🔤 🍇
+			🐼lines❗
+		🍉
+		🍡lines❗ ➡ linesIter
+
+		💭 Abort on empty response
+		↪ ❎🔽linesIter❓❗ 🍇
+			🚨🆕🚧🔸👓🔤Empty response🔤❗
+		🍉
+
+		💭 Parse the method and path from the first line
+		🔽linesIter❗ ➡ firstLine
+		🔫firstLine 🔤 🔤❗ ➡ requestElements
+		💭 Raise an error if there is not HTTP version
+		↪ 📏requestElements❓ ◀ 1 🍇
+			🚨🆕🚧🔸👓🔤No HTTP version🔤❗
+		🍉
+		💭 Parse the HTTP status, or rais an error
+		↪ 📏requestElements❓ ◀ 2 🍇
+			🚨🆕🚧🔸👓🔤No HTTP status🔤❗
+		🍉
+		🔺🗿🐇📤 🐽requestElements 1❗❗ ➡ 🖍 status
+
+		💭 Parse the headers
+		🐗headers❗
+		🔽linesIter❓ ➡ 🖍🆕 cont
+		🔁 cont 🍇
+			🔽linesIter❗ ➡ line
+			↪ line 🙌 🔤🔤 🍇
+				💭 If we reach an empty line, we've reached the body
+				👎 ➡ 🖍 cont
+			🍉
+			🙅 🍇
+				💭 Each header is on the format "<key>: <value>"
+				↪ 🔍line 🔤: 🔤❗ ➡ split 🍇
+					📪🔪line 0 split❗❗ ➡ key
+					🔪line split ➕ 2 📐line❗ ➖ split❗ ➡ value
+					value ➡ 🐽headers key❗
+				🍉
+
+				🔽linesIter❓ ➡ 🖍 cont
+			🍉
+		🍉
+
+		💭 If there are more lines, add them to the body
+		↪ 🔽linesIter❓ 🍇
+			🆕🔠❗ ➡ sb
+			🔁 🔽linesIter❓ 🍇
+				🐻sb 🔽linesIter❗❗
+				🐻sb 🔤❌r❌n🔤❗
+			🍉
+			🔡sb❗ ➡ 🖍 body
+		🍉
+		🙅 🍇
+			🔤🔤 ➡ 🖍 body
+		🍉
 	🍉
 
 	📗

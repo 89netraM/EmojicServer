@@ -8,10 +8,22 @@
 📜 🔤functionFilter.🍇🔤
 📜 🔤postProcessor.🍇🔤
 📜 🔤functionPostProcessor.🍇🔤
+📜 🔤fetch.🍇🔤
 
 🏁 🍇
 	🆕🕸️3000❗ ➡ server
 	🐻server 🆕📁🔤wwwroot🔤❗❗
+	🐐server 🔤/digIT🔤 🍇🎍🥡 request📥 ➡ 📤
+		💭 Respondes with the digIT website
+		🆗 req 💨🐇🚲 🔤http://digit.chalmers.it🔤❗ 🍇
+			🆗 res 🛂req❗ 🍇
+				↩ res
+			🍉
+			🙅 _ 🍇 🍉
+		🍉
+		🙅 _ 🍇 🍉
+		↩ 👿🐇📤❗
+	🍉❗
 	🔗server 🍇🎍🥡 request📥 ➡ 🍬📤
 		💭 Disallow unauthorized API calls
 		↪ 🎼🛤request❓ 🔤/api🔤❗ 🍇

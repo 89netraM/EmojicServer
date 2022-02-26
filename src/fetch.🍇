@@ -1,0 +1,112 @@
+📗
+	A class for making HTTP requests.
+📗
+🐇 🚲 🍇
+	📗
+		A simple GET HTTP request to `url`.
+	📗
+	🐇❗💨 url🔡 ➡ 🚲 🚧🚧 🍇
+		↩ 🔺💨🐇🚲 url 🔤GET🔤❗
+	🍉
+	📗
+		A simple GET HTTP request to `url`. With `headers` and a `body`.
+	📗
+	🐇❗💨 url🔡 headers🍯🐚🔡🍆 body🔡 ➡ 🚲 🚧🚧 🍇
+		↩ 🔺💨🐇🚲 url 🔤GET🔤 headers body❗
+	🍉
+	📗
+		A simple HTTP request to `url` with `method`.
+	📗
+	🐇❗💨 url🔡 method🔡 ➡ 🚲 🚧🚧 🍇
+		↩ 🔺💨🐇🚲 url method 🆕🍯🐚🔡🍆❗ 🔤🔤❗
+	🍉
+	📗
+		A simple HTTP request to `url` with `method`, `headers` and a `body`.
+	📗
+	🐇❗💨 url🔡 method🔡 headers🍯🐚🔡🍆 body🔡 ➡ 🚲 🚧🚧 🍇
+		🔫url 🔤/🔤❗ ➡ 🖍🆕 parts
+		↪ 📏parts❓ ◀ 3 🍇
+			🚨🆕🚧 🔤Mallformatted URL🔤❗
+		🍉
+		💭 Extract protocol
+		↪ ❎🐽parts 0❗ 🙌 🔤http:🔤❗ 🍇
+			🚨🆕🚧 🔤Unsupported protocol🔤❗
+		🍉
+		🐽parts 2❗ ➡ host
+
+		💭 Remove the protocol and host name from the URL
+		🐨parts 0❗
+		🐨parts 0❗
+		🐨parts 0❗
+
+		🔤/🧲🆕🔡 parts 🔤/🔤❗🧲🔤 ➡ path
+
+		headers ➡ 🖍🆕 h
+		host ➡ 🐽h 🔤Host🔤❗
+		🔤EmojicServer/1.0🔤 ➡ 🐽h 🔤User-Agent🔤❗
+
+		↩ 🔺🆕🚲 host 🆕📥 method path h body❗❗
+	🍉
+
+	🖍🆕 response🍬📤
+	🖍🆕 error🍬🚧
+	🖍🆕 thread🍬🧵
+
+	📗
+		Instanciates and initiates a HTTP request.
+	📗
+	🆕 domain🔡 request📥 🚧🚧 🍇
+		🆗 socket 🆕📞 domain 80❗ 🍇
+			🆕🧵 🍇🎍🥡
+				💭 Send request ot server
+				🆗 💬socket 📇🔡request❗❗❗ 🍇
+					👍 ➡ 🖍🆕 reading
+					🆕🔠❗ ➡ sb
+
+					💭 Read all the data from the server
+					🔁 reading 🍇
+						🆗 data 👂socket 1024❗ 🍇
+							↪ 🔡data❗ ➡ text 🍇
+								🐻sb text❗
+							🍉
+							↪ 📏data❓ ◀ 1024 🍇
+								👎 ➡ 🖍 reading
+							🍉
+						🍉
+						🙅 _ 🍇
+							👎 ➡ 🖍 reading
+						🍉
+					🍉
+
+					💭 Set the response and return
+					🆗 r 🆕📤 🔡sb❗❗ 🍇
+						r ➡ 🖍 response
+					🍉
+					🙅 e 🍇
+						🆕🚧 💬e❗❗ ➡ 🖍 error
+					🍉
+				🍉
+				🙅 e 🍇
+					🆕🚧 💬e❗❗ ➡ 🖍 error
+				🍉
+			🍉❗ ➡ 🖍 thread
+		🍉
+		🙅 error 🍇
+			🚨🆕🚧 💬error❗❗
+		🍉
+	🍉
+
+	📗
+		Waits for the request to complete and returns the result, or raises an
+		error.
+	📗
+	❗🛂 ➡ 📤 🚧🚧 🍇
+		🛂🍺thread❗
+		💭 Returns the result
+		↪ response ➡ r 🍇
+			↩ r
+		🍉
+		💭 If no result is precent, the error must exist
+		🚨🍺error
+	🍉
+🍉

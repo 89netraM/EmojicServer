@@ -9,6 +9,8 @@
 	🖍🆕 headers 🍯🐚🔡🍆 ⬅ 🆕🍯🐚🔡🍆❗
 	🖍🆕 body 🔡
 
+	🆕 🍼method🔡 🍼path🔡 🍼headers🍯🐚🔡🍆 🍼body🔡 🍇🍉
+
 	🆕 request🔡 🚧🚧🔸👓 🍇
 		💭 Splits the request into lines and remove the last line if it's empty
 		🔫request 🔤❌r❌n🔤❗ ➡ 🖍🆕 lines
@@ -103,14 +105,16 @@
 	📗
 	❗🔡 ➡ 🔡 🍇
 		🆕🔠❗ ➡ sb
-		🐻sb 🔤🧲method🧲 🧲path🧲🔤❗
+		🐻sb 🔤🧲method🧲 🧲path🧲 HTTP/1.1🔤❗
 
 		🔂 key 🐙headers❗ 🍇
 			🐻sb 🔤❌r❌n🧲key🧲: 🧲🍺🐽headers key❗🧲🔤❗
 		🍉
 
+		🐻sb 🔤❌r❌n❌r❌n🔤❗
+
 		↪ ❎body 🙌 🔤🔤❗ 🍇
-			🐻sb 🔤❌r❌n❌r❌n🧲body🧲🔤❗
+			🐻sb body❗
 		🍉
 
 		↩ 🔡sb❗
